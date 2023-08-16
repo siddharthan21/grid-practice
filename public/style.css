@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-rows: 2fr 73vh 1fr;
+}
+.header{
+    /* grid-area: header; */
+    margin: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-item{
+    display: flex;
+    gap:30px;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    gap: 100px;
+}
+.left{
+    /* grid-area: left; */
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px ;
+}
+h1{
+    font-size: 4.5rem;
+}
+.left > p{
+    font-size: 1.6rem;
+}
+.right{
+    /* grid-area: right; */
+    position: relative;
+}
+.right>img{
+    z-index: 1;
+}
+input{
+    border-radius: 5px;
+    padding: 1rem;
+    width: 60%;
+    border: none;
+}
+.mail>h2{
+    background-color: rgb(54, 54, 189);
+    padding: 10px;
+}
+.mail{
+    display: flex;
+    gap: 10px;   
+}
+.foot-1{
+    /* grid-area: footer; */
+    display: flex;
+    gap: 20px;
+    margin-left:4rem;
+    color: black;
+}
+.spam{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+}
+.bg>img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.right{
+    display: flex;
+    justify-content: center;
+}
+.i1{
+    transform: rotate(-36deg);
+
+}
+.i2{
+    z-index: -1;
+    transform: rotate(-24deg);
+}
+.i3{
+    z-index: -1;
+    transform: rotate(-12deg);
+
+}
+.bg>img{
+    /* justify-items: center; */
+    width: 450px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (max-width: 1200px) and (min-width: 789px){
+    .left>h1{
+        font-size: 3rem;
+    }
+    body{
+        grid-template-columns:1fr;
+        grid-template-rows: 2fr max-content 1fr ;
+    }
+    .main-content{
+        /* grid-template-rows: 1fr fr; */
+        display: flex;
+        flex-direction:column-reverse;
+        margin-top: auto;
+    }
+    .right{
+        align-items: center;
+        /* width: 300px; */
+    }
+}
+@media(max-width:789px){
+    .deatiles,.sigin>h3{
+        display: none;
+    }
+    .left>h1{
+        font-size: 2rem;
+    }
+    body{
+        grid-template-columns:1fr;
+        grid-template-rows: 2fr max-content 1fr ;
+    }
+    .main-content{
+        /* grid-template-rows: 1fr fr; */
+        display: flex;
+        flex-direction:column-reverse;
+        margin-top: auto;
+    }
+    .right2>img{
+        align-items: center;
+        width: 290px;
+    }
+    .bg>img{
+        width: 290px;
+        align-items: center;
+    }
+
+}
